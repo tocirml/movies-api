@@ -10,7 +10,7 @@ class Transaction < ApplicationRecord
   belongs_to :movie
 
   def update_stock
-    movie.update_params({ stock: movie.stock - 1 }) if movie.available
+    movie.update({ stock: movie.stock - 1 }) if movie.available
   end
 
   def movie_available?

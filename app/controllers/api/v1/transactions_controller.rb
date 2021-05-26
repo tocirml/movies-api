@@ -5,7 +5,6 @@ module Api
 
       def index
         @transactions = @movie.transactions.created_between(params[:from], params[:to]) unless @movie.nil?
-        # @transactions = Transaction.created_between(params[:from], params[:to], params[:id])
 
         if @transactions.present?
           render json: { status: 'SUCCESS', transactions: TransactionSerializer.new(@transactions) },
