@@ -1,0 +1,2 @@
+class SaleSerializer < TransactionSerializer
+end

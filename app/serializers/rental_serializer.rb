@@ -1,0 +1,2 @@
+class RentalSerializer < TransactionSerializer
+end
